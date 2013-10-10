@@ -24,6 +24,9 @@ public class jardin extends JPanel {
 	
 	
 	private Celda[][] vectorjardin;
+	private Celda[][] estadosiguientejardin; // este vector tendra al iniciar las caracteristicas de
+											 // vector jardin pero se usara para calcular el estado
+											 // siguiente del mapa
 	
 	RadioButtons opcion;
 	
@@ -34,18 +37,33 @@ public class jardin extends JPanel {
 		//array[fila][columna].setcelda(x);
 	//}
 	
-	public Celda[][] getvectorjardin(){
+	public Celda[][] getvectorjardin(){// get array estado actual
 		return vectorjardin;
 	}
 	
-	public void setvectorjardin(int filas, int columnas){
+	public void setvectorjardin(int filas, int columnas){// set estado actual
 		this.vectorjardin = new Celda[filas][columnas];
 	}
 	
-	public void colocarenlacelda(int fila, int columna, int valor){
+	public void colocarenlacelda(int fila, int columna, int valor){// set array estado actual
 		getvectorjardin()[fila][columna].setcelda(valor);
 	}
 
+	public Celda[][] getestadosiguientejardin(){// get array la posicion siguiente
+		return vectorjardin;
+	}
+	
+	public void setestadosiguientejardin(int filas, int columnas){// set array posicion siguiente
+		this.vectorjardin = new Celda[filas][columnas];
+	}
+	
+	public void celdaestadosiguientejardin(int fila, int columna, int valor){// set array posicion siguiente
+		getvectorjardin()[fila][columna].setcelda(valor);
+	}
+	
+	
+	
+	
 	public jardin(final int filas, final int columnas, int tamano, RadioButtons ops, int modo, int porcentaje){
 
 		opcion = ops;
