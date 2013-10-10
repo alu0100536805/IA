@@ -6,6 +6,7 @@
 //                                                //
 //                                                //
 ////////////////////////////////////////////////////
+
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -20,7 +21,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
-
+// Comentario de prueba para ver si funciona GIT
 public class Start {
 	
 	static int columnas = 0;
